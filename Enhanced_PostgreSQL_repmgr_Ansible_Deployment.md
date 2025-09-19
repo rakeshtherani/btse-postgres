@@ -98,6 +98,7 @@ ansible-playbook -i inventory/hosts.yml site.yml
 
 ### **Complete Automation**
 ✅ **Hardware-Aware Configuration** - Automatically calculates optimal PostgreSQL settings
+
 ✅ **OS Tuning Integration** - Comprehensive kernel parameter optimization
 
 ✅ **Zero Manual Editing** - No manual configuration file editing needed
@@ -147,15 +148,15 @@ ansible-playbook -i inventory/hosts.yml site.yml
 This script automates **ALL** steps from the manual repmgr setup guide:
 
 ### **Part A: Primary Server Setup** ✅
-1. ✅ Install development tools and compile repmgr
-2. ✅ Add repmgr to postgres user PATH
-3. ✅ Configure PostgreSQL for repmgr (shared_preload_libraries, WAL settings)
-4. ✅ Configure pg_hba.conf with proper rule ordering
-5. ✅ Create repmgr database and user
-6. ✅ Create repmgr configuration file
-7. ✅ Register primary node
-8. ✅ Create replication slot for standby
-9. ✅ Setup SSH for postgres user
+1. - ✅ Install development tools and compile repmgr
+2. - ✅ Add repmgr to postgres user PATH
+3. - ✅ Configure PostgreSQL for repmgr (shared_preload_libraries, WAL settings)
+4. - ✅ Configure pg_hba.conf with proper rule ordering
+5. - ✅ Create repmgr database and user
+6. - ✅ Create repmgr configuration file
+7. - ✅ Register primary node
+8. - ✅ Create replication slot for standby
+9. - ✅ Setup SSH for postgres user
 
 ### **Part B: Standby Server Setup** ✅
 10. ✅ Install repmgr on standby server
