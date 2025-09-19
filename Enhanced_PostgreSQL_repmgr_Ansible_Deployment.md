@@ -98,7 +98,6 @@ ansible-playbook -i inventory/hosts.yml site.yml
 
 ### **Complete Automation**
 ✅ **Hardware-Aware Configuration** - Automatically calculates optimal PostgreSQL settings
-
 ✅ **OS Tuning Integration** - Comprehensive kernel parameter optimization
 
 ✅ **Zero Manual Editing** - No manual configuration file editing needed
