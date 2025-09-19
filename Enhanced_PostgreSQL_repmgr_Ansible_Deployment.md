@@ -229,22 +229,22 @@ ansible-playbook -i inventory/hosts.yml playbooks/setup_manual_failover_guide.ym
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │                      OS Tuning Layer                        │
-│  • Kernel Parameters    • Hugepages (1536)         │
-│  • THP Disabled        • Network Tuning  • File Descriptors │
-│  • Shared Memory (2147483648)         • System Limits       │
+│  • Kernel Parameters  • Hugepages (1536) • THP Disabled     │
+│  • Network Tuning     • File Descriptors                    │
+│  • Shared Memory (2147483648)            • System Limits    │
 └─────────────────────────────────────────────────────────────┘
                                 │
 ┌─────────────────────────────────────────────────────────────┐
 │                  PostgreSQL Configuration                   │
-│  • Shared Buffers: 1024MB     │
-│  • Work Memory: 41943kB per connection        │
-│  • 2 CPU cores → 2 workers │
-│  • Storage: SSD (1.1 random page cost) │
+│  • Shared Buffers: 1024MB                                   │
+│  • Work Memory: 41943kB per connection                      │
+│  • 2 CPU cores → 2 workers                                  │
+│  • Storage: SSD (1.1 random page cost)                      │
 └─────────────────────────────────────────────────────────────┘
                                 │
 ┌──────────────────┐                    ┌──────────────────┐
-│  Primary Server  │◄──── repmgr ────► │ Standby Server   │
-│  10.40.0.24   │                    │  10.40.0.27   │
+│  Primary Server  │◄──── repmgr ────►  │ Standby Server   │
+│  10.40.0.24      │                    │  10.40.0.27      │
 │                  │                    │                  │
 │  • Read/Write    │                    │  • Read-Only     │
 │  • WAL Sender    │                    │  • WAL Receiver  │
@@ -254,9 +254,9 @@ ansible-playbook -i inventory/hosts.yml playbooks/setup_manual_failover_guide.ym
                  │                              │
          ┌───────────────────────────────────────────────┐
          │              Manual Failover Only             │
-         │  • No repmgrd daemon running                 │
-         │  • Manual promotion and switchover           │
-         │  • Status monitoring and health checks       │
+         │  • No repmgrd daemon running                  │
+         │  • Manual promotion and switchover            │
+         │  • Status monitoring and health checks        │
          └───────────────────────────────────────────────┘
 ```
 
